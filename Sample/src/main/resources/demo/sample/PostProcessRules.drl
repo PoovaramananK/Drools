@@ -1,2 +1,32 @@
 package demo.sample;
+import com.sample.DroolsTest.MRMeasurementData
+
+
+//declare any global variables here
+
+
+
+
+rule "HeliumOOS"
+
+    when
+        //conditions
+        m : MRMeasurementData( GetHeliumValue >= MRMeasurementData.HELIUMOOS)        
+    then
+        //actions
+		System.out.println("Helium out of spec");
+		m.SetHeliumOOS(1);
+		update(m);		
+end
+
+rule "HeliumNotOOS"
+   when
+        //conditions
+        m : MRMeasurementData( GetHeliumValue < MRMeasurementData.HELIUMOOS)        
+    then
+        //actions
+		System.out.println("Helium NOT out of spec");
+		m.SetHeliumOOS(0);
+end
+
 
