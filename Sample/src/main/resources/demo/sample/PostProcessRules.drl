@@ -1,5 +1,5 @@
 package demo.sample;
-import com.sample.DroolsTest.MRMeasurementData
+import demo.sample.MRMeasurementData
 
 
 //declare any global variables here
