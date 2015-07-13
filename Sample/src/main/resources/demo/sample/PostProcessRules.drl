@@ -1,19 +1,14 @@
 package demo.sample;
 
-
-import MRMeasurementData
+import demo.sample.MRMeasurementData;
 
 
 //declare any global variables here
-
-
-
-
 rule "HeliumOOS"
 
     when
         //conditions
-        m : MRMeasurementData( GetHeliumValue >= MRMeasurementData.HELIUMOOS)        
+        m : demo.sample.MRMeasurementData( GetHeliumValue >= demo.sample.MRMeasurementData.HELIUMOOS)        
     then
         //actions
 		System.out.println("Helium out of spec");
@@ -24,7 +19,7 @@ end
 rule "HeliumNotOOS"
    when
         //conditions
-        m : MRMeasurementData( GetHeliumValue < MRMeasurementData.HELIUMOOS)        
+        m : demo.sample.MRMeasurementData( GetHeliumValue < demo.sample.MRMeasurementData.HELIUMOOS)        
     then
         //actions
 		System.out.println("Helium NOT out of spec");
