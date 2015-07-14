@@ -10,3 +10,14 @@ rule "HeliumOOS"
 		m.setmIsHeliumOOS(true);
 		update(m);	
 end
+
+rule "HeliumNotOOS"
+   when
+        //conditions
+        m : MRMeasurementDataModel( mHeliumValue <=  MRMeasurementDataModel.HELIUMOOSLIMIT)        
+    then
+        //actions
+		System.out.println("Helium NOT out of spec");
+		m.setmIsHeliumOOS(true);
+		update(m);
+end
