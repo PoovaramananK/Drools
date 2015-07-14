@@ -8,7 +8,7 @@ rule "HeliumOOS"
 	then
 		System.out.println("Helium out of spec");
 		m.setmIsHeliumOOS(true);
-		update(m);	
+		//update(m);	
 end
 
 rule "HeliumNotOOS"
