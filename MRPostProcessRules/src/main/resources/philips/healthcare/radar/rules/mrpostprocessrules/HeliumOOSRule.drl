@@ -18,6 +18,6 @@ rule "HeliumNotOOS"
     then
         //actions
 		System.out.println("Helium NOT out of spec");
-		m.setmIsHeliumOOS(true);
+		m.setmIsHeliumOOS(false);
 		//update(m);
 end
