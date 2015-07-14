@@ -1,2 +1,9 @@
 package philips.healthcare.radar.rules.mrpostprocessrules;
 
+
+rule "HeliumOOS"
+	when
+		this.HeliumValue > 20
+	then
+		this.HeliumOOS = true;
+end
