@@ -9,14 +9,16 @@ public class MRMeasurementDataModel implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "HeliumValue")
+   @org.kie.api.definition.type.Label("HeliumValue")
    private int mHeliumValue;
 
-   @org.kie.api.definition.type.Label(value = "RoomTemperatureValue")
+   @org.kie.api.definition.type.Label("RoomTemperatureValue")
    private int mRoomTemperatureValue;
 
-   @org.kie.api.definition.type.Label(value = "HeliumOOS")
+   @org.kie.api.definition.type.Label("HeliumOOS")
    private java.lang.Boolean mIsHeliumOOS;
+
+   private int HELIUMOOSLIMIT;
 
    public MRMeasurementDataModel()
    {
@@ -52,12 +54,23 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.mIsHeliumOOS = mIsHeliumOOS;
    }
 
+   public int getHELIUMOOSLIMIT()
+   {
+      return this.HELIUMOOSLIMIT;
+   }
+
+   public void setHELIUMOOSLIMIT(int HELIUMOOSLIMIT)
+   {
+      this.HELIUMOOSLIMIT = HELIUMOOSLIMIT;
+   }
+
    public MRMeasurementDataModel(int mHeliumValue, int mRoomTemperatureValue,
-         java.lang.Boolean mIsHeliumOOS)
+         java.lang.Boolean mIsHeliumOOS, int HELIUMOOSLIMIT)
    {
       this.mHeliumValue = mHeliumValue;
       this.mRoomTemperatureValue = mRoomTemperatureValue;
       this.mIsHeliumOOS = mIsHeliumOOS;
+      this.HELIUMOOSLIMIT = HELIUMOOSLIMIT;
    }
 
 }
