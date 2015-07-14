@@ -7,6 +7,6 @@ rule "HeliumOOS"
 		m :  MRMeasurementDataModel( mHeliumValue > MRMeasurementDataModel.HELIUMOOSLIMIT)
 	then
 		System.out.println("Helium out of spec");
-		m.SetIsHeliumOOS(1);
+		m.setmIsHeliumOOS(true);
 		update(m);	
 end
