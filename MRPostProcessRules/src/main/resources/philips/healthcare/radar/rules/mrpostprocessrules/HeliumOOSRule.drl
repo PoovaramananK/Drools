@@ -3,7 +3,7 @@ package philips.healthcare.radar.rules.mrpostprocessrules;
 
 rule "HeliumOOS"
 	when
-		this.HeliumValue > 20
+		mHeliumValue > HELIUMOOSLIMIT
 	then
-		this.HeliumOOS = true;
+		mIsHeliumOOS= true;
 end
