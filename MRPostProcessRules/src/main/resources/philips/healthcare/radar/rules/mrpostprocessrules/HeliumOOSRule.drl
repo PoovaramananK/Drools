@@ -2,13 +2,14 @@ package philips.healthcare.radar.rules.mrpostprocessrules;
 
 import philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel
 
-rule "HeliumOOS"
+rule "HeliumOOS" 
+	no-loop -true
 	when
 		m :  MRMeasurementDataModel( mHeliumValue > MRMeasurementDataModel.HELIUMOOSLIMIT)
 	then
 		System.out.println("Helium out of spec");
 		m.setmIsHeliumOOS(true);
-		//update(m);	
+		update(m);	
 end
 
 rule "HeliumNotOOS"
