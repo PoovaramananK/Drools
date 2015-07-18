@@ -3,7 +3,7 @@ package philips.healthcare.radar.rules.mrpostprocessrules;
 import philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel
 
 rule "HeliumOOS" 
-	no-loop -true
+	no-loop("true")
 	when
 		m :  MRMeasurementDataModel( mHeliumValue > MRMeasurementDataModel.HELIUMOOSLIMIT)
 	then
