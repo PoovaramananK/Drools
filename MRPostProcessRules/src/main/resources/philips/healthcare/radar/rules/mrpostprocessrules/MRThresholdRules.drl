@@ -15,7 +15,7 @@ then
 	System.out.println("CoolingOOSSpec_CAB1_4k");
 	$coolingBoundry.setMinValue(20);
 	$coolingBoundry.setMaxValue(30);
-	update($coolingBoundry);
+	//update($coolingBoundry);
 end
 
 rule "CoolingOOSSpec_CAB1_10K"
@@ -27,5 +27,5 @@ then
 	System.out.println("CoolingOOSSpec_CAB1_10k");
 	$coolingBoundry.setMinValue(40);
 	$coolingBoundry.setMaxValue(60);
-	update($coolingBoundry);
+	//update($coolingBoundry);
 end
