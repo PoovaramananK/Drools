@@ -12,6 +12,7 @@ when
 	MRDeviceConfig(coolingCabinet.equals("Cab1") && 
 					magnetType.equals("4k"));
 then
+	System.out.println("CoolingOOSSpec_CAB1_4k");
 	$coolingBoundry.setMinValue(20);
 	$coolingBoundry.setMaxValue(30);
 	update($coolingBoundry);
@@ -23,6 +24,7 @@ when
 	MRDeviceConfig(coolingCabinet.equals("Cab1") && 
 					magnetType.equals("10k"));
 then
+	System.out.println("CoolingOOSSpec_CAB1_10k");
 	$coolingBoundry.setMinValue(40);
 	$coolingBoundry.setMaxValue(60);
 	update($coolingBoundry);
