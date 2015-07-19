@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>philips.healthcare.radar.rules</groupId>
   <artifactId>MRPostProcessRules</artifactId>
-  <version>6.0</version>
+  <version>7.0</version>
   <name>MRPostProcessRules</name>
   <build>
     <plugins>
