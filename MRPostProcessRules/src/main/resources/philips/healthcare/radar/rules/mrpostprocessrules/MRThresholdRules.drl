@@ -9,7 +9,7 @@ no-loop true
 when 
 	$coolingBoundry : MRCoolingBoundry(
 							deviceConfig.coolingCabinet.equals("Cab1") && 
-							deviceConfig.coolingCabinet.equals("4k")
+							deviceConfig.magnetType.equals("4k")
 									)
 then
 	System.out.println("CoolingOOSSpec_CAB1_4k");
@@ -22,7 +22,7 @@ rule "CoolingOOSSpec_CAB1_10K"
 no-loop true
 when
 	$coolingBoundry: MRCoolingBoundry(deviceConfig.coolingCabinet.equals("Cab1") && 
-					deviceConfig.coolingCabinet.equals("10k"));
+					deviceConfig.magnetType.equals("10k"));
 then
 	System.out.println("CoolingOOSSpec_CAB1_10k");
 	$coolingBoundry.setMinValue(40);
