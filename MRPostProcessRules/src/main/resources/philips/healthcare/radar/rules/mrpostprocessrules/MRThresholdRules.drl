@@ -6,9 +6,11 @@ import philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig;
 
 rule "CoolingOOSSpec_CAB1_4k"
 no-loop true
-when
-	$coolingBoundry: MRCoolingBoundry(deviceConfig.coolingCabinet.equals("Cab1") && 
-					deviceConfig.coolingCabinet.equals("4k"));
+when 
+	$coolingBoundry : MRCoolingBoundry(
+							deviceConfig.coolingCabinet.equals("Cab1") && 
+							deviceConfig.coolingCabinet.equals("4k")
+									)
 then
 	System.out.println("CoolingOOSSpec_CAB1_4k");
 	$coolingBoundry.setMinValue(20);
