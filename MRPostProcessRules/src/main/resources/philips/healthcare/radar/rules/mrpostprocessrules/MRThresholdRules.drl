@@ -1,2 +1,29 @@
 package philips.healthcare.radar.rules.mrpostprocessrules;
 
+import philips.healthcare.radar.rules.mrpostprocessrules.MRCoolingBoundry;
+import philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel;
+import philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig;
+
+global philips.healthcare.radar.rules.mrpostprocessrules.MRCoolingBoundry $coolingBoundry
+
+rule "CoolingOOSSpec_CAB1_4k"
+no-loop true
+when
+	MRDeviceConfig(coolingCabinet.equals("Cab1") && 
+					magnetType.equals("4k"));
+then
+	$coolingBoundry.setMinValue(20);
+	$coolingBoundry.setMaxValue(30);
+	update($coolingBoundry);
+end
+
+rule "CoolingOOSSpec_CAB1_10K"
+no-loop true
+when
+	MRDeviceConfig(coolingCabinet.equals("Cab1") && 
+					magnetType.equals("10k"));
+then
+	$coolingBoundry.setMinValue(40);
+	$coolingBoundry.setMaxValue(60);
+	update($coolingBoundry);
+end
