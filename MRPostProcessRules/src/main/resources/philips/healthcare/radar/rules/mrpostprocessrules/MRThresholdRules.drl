@@ -8,8 +8,8 @@ rule "CoolingOOSSpec_CAB1_4k"
 no-loop true
 when 
 	$coolingBoundry : MRCoolingBoundry(
-							MRDeviceConfig.coolingCabinet.equals("Cab1") && 
-							MRDeviceConfig.coolingCabinet.equals("4k")
+							deviceConfig.coolingCabinet.equals("Cab1") && 
+							deviceConfig.coolingCabinet.equals("4k")
 									)
 then
 	System.out.println("CoolingOOSSpec_CAB1_4k");
