@@ -13,6 +13,8 @@ public class MRCoolingBoundry implements java.io.Serializable
 
    private int maxValue;
 
+   private philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig;
+
    public MRCoolingBoundry()
    {
    }
@@ -37,10 +39,25 @@ public class MRCoolingBoundry implements java.io.Serializable
       this.maxValue = maxValue;
    }
 
-   public MRCoolingBoundry(int minValue, int maxValue)
+   public philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig getDeviceConfig()
+   {
+      return this.deviceConfig;
+   }
+
+   public void setDeviceConfig(
+         philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig)
+   {
+      this.deviceConfig = deviceConfig;
+   }
+
+   public MRCoolingBoundry(
+         int minValue,
+         int maxValue,
+         philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig)
    {
       this.minValue = minValue;
       this.maxValue = maxValue;
+      this.deviceConfig = deviceConfig;
    }
 
 }
