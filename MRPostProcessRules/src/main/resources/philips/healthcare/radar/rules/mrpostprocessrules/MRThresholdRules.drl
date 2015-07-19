@@ -13,6 +13,7 @@ when
 					magnetType.equals("4k"));
 then
 	System.out.println("CoolingOOSSpec_CAB1_4k");
+	$coolingBoundry = new philips.healthcare.radar.rules.mrpostprocessrules.MRCoolingBoundry();
 	$coolingBoundry.setMinValue(20);
 	$coolingBoundry.setMaxValue(30);
 	//update($coolingBoundry);
@@ -25,6 +26,7 @@ when
 					magnetType.equals("10k"));
 then
 	System.out.println("CoolingOOSSpec_CAB1_10k");
+	$coolingBoundry = new philips.healthcare.radar.rules.mrpostprocessrules.MRCoolingBoundry();
 	$coolingBoundry.setMinValue(40);
 	$coolingBoundry.setMaxValue(60);
 	//update($coolingBoundry);
