@@ -175,7 +175,7 @@ end
 rule "Helium 4k magnet pressure rule severity high"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetTypeCategory== 	"4K" && HeliumPressure > 100)
+	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetTypeCategory == 	"4K" && (HeliumPressure > 100 || HeliumPressure < 26))
 	then
 	System.out.println("Helium 4k magnet pressure rule severity high");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
