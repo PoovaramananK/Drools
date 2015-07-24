@@ -29,21 +29,27 @@ no-loop true
 	then		
 		System.out.println("Connectivity Rule Severity None");
 		$MRMeasurementDataModel.setConnectivitySeverity("None");
-		update($MRMeasurementDataModel)
+		update($MRMeasurementDataModel);
 end
 
 rule "Helium level rule Severity High"
 no-loop true
 	when
+		$MRMeasurementDataModel: MRMeasurementDataModel(HeliumLevel < 35 	|| HeliumBoilOff > 0.9)
 	then
 	System.out.println("Helium level rule Severity High");
+	$MRMeasurementDataModel.setHeliumSeverity("High");
+	update($MRMeasurementDataModel);
 end
 
 rule "Helium level rule Severity Medium"
 no-loop true
 	when
+		$MRMeasurementDataModel: MRMeasurementDataModel(HeliumLevel >= 35 && HeliumLevel <= 45 )
 	then
 	System.out.println("Helium level rule Severity Medium");
+	$MRMeasurementDataModel.setHeliumSeverity("Medium");
+	update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule for Titan magnet type"
