@@ -13,6 +13,9 @@ public class MRDeviceConfig implements java.io.Serializable
    private java.lang.String coolingCabinet;
    private java.lang.String magnetType;
 
+   @org.kie.api.definition.type.Label(value = "MagnetTypeCategory")
+   private java.lang.String magnetTypeCategory;
+
    public MRDeviceConfig()
    {
    }
@@ -37,11 +40,22 @@ public class MRDeviceConfig implements java.io.Serializable
       this.magnetType = magnetType;
    }
 
+   public java.lang.String getMagnetTypeCategory()
+   {
+      return this.magnetTypeCategory;
+   }
+
+   public void setMagnetTypeCategory(java.lang.String magnetTypeCategory)
+   {
+      this.magnetTypeCategory = magnetTypeCategory;
+   }
+
    public MRDeviceConfig(java.lang.String coolingCabinet,
-         java.lang.String magnetType)
+         java.lang.String magnetType, java.lang.String magnetTypeCategory)
    {
       this.coolingCabinet = coolingCabinet;
       this.magnetType = magnetType;
+      this.magnetTypeCategory = magnetTypeCategory;
    }
 
 }
