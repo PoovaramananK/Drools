@@ -1,2 +1,13 @@
 package philips.healthcare.radar.rules.mrpostprocessrules;
 
+import philips.healthcare.radar.rules.mrpostprocessrules.ConnectivityDataModel;
+
+rule "Connectivity Rule Severity High"
+no-loop true
+	when 
+		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection >10)
+	then
+		$connectivityModel.Setseverity("High");
+		update($connectivityModel)
+end
+
