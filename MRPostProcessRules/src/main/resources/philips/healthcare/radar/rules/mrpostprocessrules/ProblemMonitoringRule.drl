@@ -36,190 +36,222 @@ rule "Helium level rule Severity High"
 no-loop true
 	when
 	then
+	System.out.println("Helium level rule Severity High");
 end
 
 rule "Helium level rule Severity Medium"
 no-loop true
 	when
 	then
+	System.out.println("Helium level rule Severity Medium");
 end
 
 rule "Boil-off Rule for Titan magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule for Titan magnet type");
 end
 
 rule "Boil-off Rule Severity High for Titan magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity High for Titan magnet type");
 end
 
 rule "Boil-off Rule Severity Medium for Titan magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity Medium for Titan magnet type");
 end
 
 rule "Boil-off Rule for F2000 magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule for F2000 magnet type");
 end
 
 rule "Boil-off Rule Severity High for F2000 magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity High for F2000 magnet type");
 end
 
 rule "Boil-off Rule Severity Medium for F2000 magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity Medium for F2000 magnet type");
 end
 
 rule "Boil-off Rule for REX magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule for REX magnet type");
 end
 
 rule "Boil-off Rule Severity High for REX magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity High for REX magnet type");
 end
 
 rule "Boil-off Rule Severity Medium for REX magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity Medium for REX magnet type");
 end
 
 rule "Boil-off Rule for HFO magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule for HFO magnet type");
 end
 
 rule "Boil-off Rule Severity High for HFO magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity High for HFO magnet type");
 end
 
 rule "Boil-off Rule Severity Medium for HFO magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity Medium for HFO magnet type");
 end
 
 rule "Boil-off Rule for WA30T magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule for WA30T magnet type");
 end
 
 rule "Boil-off Rule Severity High for WA30T magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity High for WA30T magnet type");
 end
 
 rule "Boil-off Rule Severity Medium for WA30T magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity Medium for WA30T magnet type");
 end
 
 rule "Boil-off Rule for WA15T magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule for WA15T magnet type");
 end
 
 rule "Boil-off Rule Severity High for WA15T magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity High for WA15T magnet type");
 end
 
 rule "Boil-off Rule Severity Medium for WA15T magnet type"
 no-loop true
 	when
 	then
+	System.out.println("Boil-off Rule Severity Medium for WA15T magnet type");
 end
 
 rule "Helium 4k magnet pressure rule severity high"
 no-loop true
 	when
 	then
+	System.out.println("Helium 4k magnet pressure rule severity high");
 end
 
 rule "Helium 10k magnet pressure rule severity high"
 no-loop true
 	when
 	then
+	System.out.println("Helium 10k magnet pressure rule severity high");
 end
 
 rule "Helium 4k magnet pressure rule severity medium"
 no-loop true
 	when
 	then
+	System.out.println("Helium 4k magnet pressure rule severity medium");
 end
 
 rule "Helium 10k magnet pressure rule severity medium"
 no-loop true
 	when
 	then
+	System.out.println("Helium 10k magnet pressure rule severity medium");
 end
 
 rule "Performance Rule Severity High"
 no-loop true
 	when
 	then
+	System.out.println("Performance Rule Severity High");
 end
 
 rule "Performance Rule Severity None"
 no-loop true
 	when
 	then
+	System.out.println("Performance Rule Severity None");
 end
 
 rule "HW/SW Errors Rule Severity High"
 no-loop true
 	when
 	then
+	System.out.println("HW/SW Errors Rule Severity High");
 end
 
 rule "HW/SW Errors Rule Severity None"
 no-loop true
 	when
 	then
+	System.out.println("HW/SW Errors Rule Severity None");
 end
 
 rule "Cooling Rule Severity High"
 no-loop true
 	when
 	then
+	System.out.println("Cooling Rule Severity High");
 end
 
 rule "Cooling Rule Severity None"
 no-loop true
 	when
 	then
+	System.out.println("Cooling Rule Severity None");
 end
 
 rule "IQT Quality Assurance High"
 no-loop true
 	when
 	then
+	System.out.println("IQT Quality Assurance High");
 end
 
 rule "IQT Quality Assurance None"
 no-loop true
 	when
 	then
+	System.out.println("IQT Quality Assurance None");
 end
