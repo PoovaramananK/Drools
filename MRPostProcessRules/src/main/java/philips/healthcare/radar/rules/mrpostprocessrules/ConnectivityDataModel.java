@@ -10,7 +10,7 @@ public class ConnectivityDataModel implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private int numberDaysWithoutConnection;
-   private philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel severity;
+   private String severity;
 
    public ConnectivityDataModel()
    {
@@ -26,20 +26,18 @@ public class ConnectivityDataModel implements java.io.Serializable
       this.numberDaysWithoutConnection = numberDaysWithoutConnection;
    }
 
-   public philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel getSeverity()
+   public java.lang.String getSeverity()
    {
       return this.severity;
    }
 
-   public void setSeverity(
-         philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel severity)
+   public void setSeverity(java.lang.String severity)
    {
       this.severity = severity;
    }
 
-   public ConnectivityDataModel(
-         int numberDaysWithoutConnection,
-         philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel severity)
+   public ConnectivityDataModel(int numberDaysWithoutConnection,
+         java.lang.String severity)
    {
       this.numberDaysWithoutConnection = numberDaysWithoutConnection;
       this.severity = severity;
