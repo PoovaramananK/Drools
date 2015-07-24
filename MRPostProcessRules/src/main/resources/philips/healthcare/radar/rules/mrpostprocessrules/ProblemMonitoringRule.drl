@@ -26,7 +26,7 @@ no-loop true
 	when
 		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection < 3)
 	then
-		$connectivityModel.setSeverity("None");
+		$connectivityModel.setSeverity("Nonephilips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel( )");
 		update($connectivityModel)
 end
 
