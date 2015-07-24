@@ -75,6 +75,9 @@ public class MRMeasurementDataModel implements java.io.Serializable
    @org.kie.api.definition.type.Label(value = "HeliumPressure.Severity")
    private java.lang.String heliumPressureSeverity;
 
+   @org.kie.api.definition.type.Label(value = "HardwareSoftwareDataSeverity")
+   private java.lang.Boolean hardwareSoftwareDataSeverity;
+
    public MRMeasurementDataModel()
    {
    }
@@ -303,6 +306,17 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.heliumPressureSeverity = heliumPressureSeverity;
    }
 
+   public java.lang.Boolean getHardwareSoftwareDataSeverity()
+   {
+      return this.hardwareSoftwareDataSeverity;
+   }
+
+   public void setHardwareSoftwareDataSeverity(
+         java.lang.Boolean hardwareSoftwareDataSeverity)
+   {
+      this.hardwareSoftwareDataSeverity = hardwareSoftwareDataSeverity;
+   }
+
    public MRMeasurementDataModel(
          int mHeliumValue,
          int mRoomTemperatureValue,
@@ -325,7 +339,8 @@ public class MRMeasurementDataModel implements java.io.Serializable
          java.lang.String IQTQualityAssuranceSeverity,
          philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig,
          java.lang.Integer longTermBoilOffMlPerHr,
-         java.lang.String heliumPressureSeverity)
+         java.lang.String heliumPressureSeverity,
+         java.lang.Boolean hardwareSoftwareDataSeverity)
    {
       this.mHeliumValue = mHeliumValue;
       this.mRoomTemperatureValue = mRoomTemperatureValue;
@@ -349,6 +364,7 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.deviceConfig = deviceConfig;
       this.longTermBoilOffMlPerHr = longTermBoilOffMlPerHr;
       this.heliumPressureSeverity = heliumPressureSeverity;
+      this.hardwareSoftwareDataSeverity = hardwareSoftwareDataSeverity;
    }
 
 }
