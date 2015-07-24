@@ -44,103 +44,181 @@ no-loop true
 	then
 end
 
-rule ""
+rule "Boil-off Rule for Titan magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity High for Titan magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity Medium for Titan magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule for F2000 magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity High for F2000 magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity Medium for F2000 magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule for REX magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity High for REX magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity Medium for REX magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule for HFO magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity High for HFO magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity Medium for HFO magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule for WA30T magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity High for WA30T magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity Medium for WA30T magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule for WA15T magnet type"
 no-loop true
 	when
 	then
 end
 
-rule ""
+rule "Boil-off Rule Severity High for WA15T magnet type"
+no-loop true
+	when
+	then
+end
+
+rule "Boil-off Rule Severity Medium for WA15T magnet type"
+no-loop true
+	when
+	then
+end
+
+rule "Helium 4k magnet pressure rule severity high"
+no-loop true
+	when
+	then
+end
+
+rule "Helium 10k magnet pressure rule severity high"
+no-loop true
+	when
+	then
+end
+
+rule "Helium 4k magnet pressure rule severity medium"
+no-loop true
+	when
+	then
+end
+
+rule "Helium 10k magnet pressure rule severity medium"
+no-loop true
+	when
+	then
+end
+
+rule "Performance Rule Severity High"
+no-loop true
+	when
+	then
+end
+
+rule "Performance Rule Severity None"
+no-loop true
+	when
+	then
+end
+
+rule "HW/SW Errors Rule Severity High"
+no-loop true
+	when
+	then
+end
+
+rule "HW/SW Errors Rule Severity None"
+no-loop true
+	when
+	then
+end
+
+rule "Cooling Rule Severity High"
+no-loop true
+	when
+	then
+end
+
+rule "Cooling Rule Severity None"
+no-loop true
+	when
+	then
+end
+
+rule "IQT Quality Assurance High"
+no-loop true
+	when
+	then
+end
+
+rule "IQT Quality Assurance None"
 no-loop true
 	when
 	then
