@@ -66,8 +66,11 @@ public class MRMeasurementDataModel implements java.io.Serializable
    @org.kie.api.definition.type.Label("IQTQualityAssuranceSeverity")
    private java.lang.String IQTQualityAssuranceSeverity;
 
-   @org.kie.api.definition.type.Label(value = "DeviceConfig")
+   @org.kie.api.definition.type.Label("DeviceConfig")
    private philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig;
+
+   @org.kie.api.definition.type.Label(value = "LongTermBoilOffMlPerHr")
+   private java.lang.Integer longTermBoilOffMlPerHr;
 
    public MRMeasurementDataModel()
    {
@@ -277,6 +280,16 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.deviceConfig = deviceConfig;
    }
 
+   public java.lang.Integer getLongTermBoilOffMlPerHr()
+   {
+      return this.longTermBoilOffMlPerHr;
+   }
+
+   public void setLongTermBoilOffMlPerHr(java.lang.Integer longTermBoilOffMlPerHr)
+   {
+      this.longTermBoilOffMlPerHr = longTermBoilOffMlPerHr;
+   }
+
    public MRMeasurementDataModel(
          int mHeliumValue,
          int mRoomTemperatureValue,
@@ -297,7 +310,8 @@ public class MRMeasurementDataModel implements java.io.Serializable
          java.lang.String climateSeverity,
          java.lang.Integer IQTQualityAssuranceOutOfSpec,
          java.lang.String IQTQualityAssuranceSeverity,
-         philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig)
+         philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig,
+         java.lang.Integer longTermBoilOffMlPerHr)
    {
       this.mHeliumValue = mHeliumValue;
       this.mRoomTemperatureValue = mRoomTemperatureValue;
@@ -319,6 +333,7 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.IQTQualityAssuranceOutOfSpec = IQTQualityAssuranceOutOfSpec;
       this.IQTQualityAssuranceSeverity = IQTQualityAssuranceSeverity;
       this.deviceConfig = deviceConfig;
+      this.longTermBoilOffMlPerHr = longTermBoilOffMlPerHr;
    }
 
 }
