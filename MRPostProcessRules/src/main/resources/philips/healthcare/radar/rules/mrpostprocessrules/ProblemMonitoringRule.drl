@@ -255,6 +255,7 @@ end
 rule "Cooling Rule Severity High"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel(MTBC <= 15 && MTBC >= 40)
 	then
 	System.out.println("Cooling Rule Severity High");
 end
