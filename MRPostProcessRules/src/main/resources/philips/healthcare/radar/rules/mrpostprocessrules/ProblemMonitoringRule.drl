@@ -7,6 +7,7 @@ no-loop true
 	when 
 		$MRMeasurementDataModel: MRMeasurementDataModel(numberDaysWithoutConnection >10)
 	then
+		System.out.println("Connectivity Rule Severity High");
 		$MRMeasurementDataModel.setConnectivitySeverity("High");
 		update($MRMeasurementDataModel)
 end
@@ -16,6 +17,7 @@ no-loop true
 	when
 		$MRMeasurementDataModel: MRMeasurementDataModel(numberDaysWithoutConnection >= 4 && numberDaysWithoutConnection <= 10 )
 	then
+		System.out.println("Connectivity Rule Severity Medium");
 		$MRMeasurementDataModel.setConnectivitySeverity("Medium");
 		update($MRMeasurementDataModel)
 end
@@ -25,7 +27,121 @@ no-loop true
 	when
 		$MRMeasurementDataModel: MRMeasurementDataModel(numberDaysWithoutConnection < 3)
 	then		
+		System.out.println("Connectivity Rule Severity None");
 		$MRMeasurementDataModel.setConnectivitySeverity("None");
 		update($MRMeasurementDataModel)
 end
 
+rule "Helium level rule Severity High"
+no-loop true
+	when
+	then
+end
+
+rule "Helium level rule Severity Medium"
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
+
+rule ""
+no-loop true
+	when
+	then
+end
