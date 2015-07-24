@@ -179,6 +179,7 @@ no-loop true
 	then
 	System.out.println("Helium 4k magnet pressure rule severity high");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
+	$MRMeasurementDataModel.setHeliumPressureSeverity("High");
 	update($MRMeasurementDataModel);
 end
 
