@@ -55,6 +55,8 @@ end
 rule "Boil-off Rule for Titan magnet type"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig HeliumLevel >= 35 && HeliumLevel <= 45 )
+
 	then
 	System.out.println("Boil-off Rule for Titan magnet type");
 end
