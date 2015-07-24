@@ -7,7 +7,26 @@ no-loop true
 	when 
 		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection >10)
 	then
-		$connectivityModel.Setseverity("High");
+		$connectivityModel.setSeverity("High");
+		update($connectivityModel)
+end
+
+rule "Connectivity Rule Severity Medium"
+no-loop true
+	when
+		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection >= 4 &&
+							numberDaysWithoutConnection <= 10 )
+	then
+		$connectivityModel.setSeverity("Medium");
+		update($connectivityModel)
+end
+
+rule "Connectivity Rule Severity None"
+no-loop true
+	when
+		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection < 3)
+	then
+		$connectivityModel.setSeverity("None");
 		update($connectivityModel)
 end
 
