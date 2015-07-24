@@ -35,7 +35,7 @@ end
 rule "Helium level rule Severity High"
 no-loop true
 	when
-		$MRMeasurementDataModel: MRMeasurementDataModel(HeliumLevel < 35 	|| HeliumBoilOff > 0.9)
+		$MRMeasurementDataModel: MRMeasurementDataModel(heliumLevel < 35 	|| heliumBoilOff > 0.9)
 	then
 	System.out.println("Helium level rule Severity High");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -45,7 +45,7 @@ end
 rule "Helium level rule Severity Medium"
 no-loop true
 	when
-		$MRMeasurementDataModel: MRMeasurementDataModel(HeliumLevel >= 35 && HeliumLevel <= 45 )
+		$MRMeasurementDataModel: MRMeasurementDataModel(heliumLevel >= 35 && heliumLevel <= 45 )
 	then
 	System.out.println("Helium level rule Severity Medium");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -55,7 +55,7 @@ end
 rule "Boil-off Rule Severity High for Titan magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == "Titan" && longTermBoilOffMlPerHr> 250 )
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == "Titan" && longTermBoilOffMlPerHr> 250 )
 	then
 	System.out.println("Boil-off Rule Severity High for Titan magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -65,7 +65,7 @@ end
 rule "Boil-off Rule Severity Medium for Titan magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == "Titan" && longTermBoilOffMlPerHr>=200 && longTermBoilOffMlPerHr<= 200)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == "Titan" && longTermBoilOffMlPerHr>=200 && longTermBoilOffMlPerHr<= 200)
 	then
 	System.out.println("Boil-off Rule Severity Medium for Titan magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -75,7 +75,7 @@ end
 rule "Boil-off Rule Severity High for F2000 magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"F2000" && longTermBoilOffMlPerHr> 150 )
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"F2000" && longTermBoilOffMlPerHr> 150 )
 	then
 	System.out.println("Boil-off Rule Severity High for F2000 magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -85,7 +85,7 @@ end
 rule "Boil-off Rule Severity Medium for F2000 magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"F2000" && longTermBoilOffMlPerHr>= 100 && longTermBoilOffMlPerHr<= 150 )
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"F2000" && longTermBoilOffMlPerHr>= 100 && longTermBoilOffMlPerHr<= 150 )
 	then
 	System.out.println("Boil-off Rule Severity Medium for F2000 magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -95,7 +95,7 @@ end
 rule "Boil-off Rule Severity High for REX magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"REX" && longTermBoilOffMlPerHr> 50 )
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"REX" && longTermBoilOffMlPerHr> 50 )
 	then
 	System.out.println("Boil-off Rule Severity High for REX magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -105,7 +105,7 @@ end
 rule "Boil-off Rule Severity Medium for REX magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"REX" && longTermBoilOffMlPerHr> 20 && longTermBoilOffMlPerHr<= 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"REX" && longTermBoilOffMlPerHr> 20 && longTermBoilOffMlPerHr<= 50)
 	then
 	System.out.println("Boil-off Rule Severity Medium for REX magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -115,7 +115,7 @@ end
 rule "Boil-off Rule Severity High for HFO magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"HFO" && longTermBoilOffMlPerHr> 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"HFO" && longTermBoilOffMlPerHr> 50)
 	then
 	System.out.println("Boil-off Rule Severity High for HFO magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -125,7 +125,7 @@ end
 rule "Boil-off Rule Severity Medium for HFO magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"HFO" && longTermBoilOffMlPerHr> 20 && longTermBoilOffMlPerHr<= 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"HFO" && longTermBoilOffMlPerHr> 20 && longTermBoilOffMlPerHr<= 50)
 	then
 	System.out.println("Boil-off Rule Severity Medium for HFO magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -135,7 +135,7 @@ end
 rule "Boil-off Rule Severity High for WA30T magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"WA_30T" && longTermBoilOffMlPerHr> 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"WA_30T" && longTermBoilOffMlPerHr> 50)
 	then
 	System.out.println("Boil-off Rule Severity High for WA30T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -145,7 +145,7 @@ end
 rule "Boil-off Rule Severity Medium for WA30T magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"WA_30T" && longTermBoilOffMlPerHr> 20 && longTermBoilOffMlPerHr<= 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"WA_30T" && longTermBoilOffMlPerHr> 20 && longTermBoilOffMlPerHr<= 50)
 	then
 	System.out.println("Boil-off Rule Severity Medium for WA30T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -155,7 +155,7 @@ end
 rule "Boil-off Rule Severity High for WA15T magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"WA_15T" && LongTermBoilOffMlPerHr > 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"WA_15T" && longTermBoilOffMlPerHr > 50)
 	then
 	System.out.println("Boil-off Rule Severity High for WA15T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -165,7 +165,7 @@ end
 rule "Boil-off Rule Severity Medium for WA15T magnet type"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetType == 	"WA_15T" && LongTermBoilOffMlPerHr > 20 && LongTermBoilOffMlPerHr <= 50)
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetType == 	"WA_15T" && longTermBoilOffMlPerHr > 20 && longTermBoilOffMlPerHr <= 50)
 	then
 	System.out.println("Boil-off Rule Severity Medium for WA15T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -175,7 +175,7 @@ end
 rule "Helium 4k magnet pressure rule severity high"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetTypeCategory == 	"4K" && (HeliumPressure > 100 || HeliumPressure < 26))
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetTypeCategory == 	"4K" && (heliumPressure > 100 || heliumPressure < 26))
 	then
 	System.out.println("Helium 4k magnet pressure rule severity high");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -186,7 +186,7 @@ end
 rule "Helium 10k magnet pressure rule severity high"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetTypeCategory == 	"10K" && (HeliumPressure > 120 || HeliumPressure < 40))
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetTypeCategory == 	"10K" && (heliumPressure > 120 || heliumPressure < 40))
 	then
 	System.out.println("Helium 10k magnet pressure rule severity high");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
@@ -197,7 +197,7 @@ end
 rule "Helium 4k magnet pressure rule severity medium"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetTypeCategory == 	"4K" && (HeliumPressure >= 37 && HeliumPressure <= 100))
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetTypeCategory == 	"4K" && (heliumPressure >= 37 && heliumPressure <= 100))
 	then
 	System.out.println("Helium 4k magnet pressure rule severity medium");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -208,7 +208,7 @@ end
 rule "Helium 10k magnet pressure rule severity medium"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(MRDeviceConfig.MagnetTypeCategory == 	"4K" && ( (HeliumPressure >= 100 && HeliumPressure <= 120) || (HeliumPressure >= 40 && HeliumPressure <= 50) ))
+	$MRMeasurementDataModel: MRMeasurementDataModel(deviceConfig.magnetTypeCategory == 	"4K" && ( (heliumPressure >= 100 && heliumPressure <= 120) || (heliumPressure >= 40 && heliumPressure <= 50) ))
 	then
 	System.out.println("Helium 10k magnet pressure rule severity medium");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
@@ -219,7 +219,7 @@ end
 rule "Performance Rule Severity High"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec == true)
+	$MRMeasurementDataModel: MRMeasurementDataModel(specificationIndexIsOutOfSpec == true)
 	then
 	System.out.println("Performance Rule Severity High");
 	$MRMeasurementDataModel.setPerformanceDataSeverity(true);
@@ -228,7 +228,7 @@ end
 rule "Performance Rule Severity None"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec == false)
+	$MRMeasurementDataModel: MRMeasurementDataModel(specificationIndexIsOutOfSpec == false)
 	then
 	System.out.println("Performance Rule Severity None");
 	$MRMeasurementDataModel.setPerformanceDataSeverity(false);
