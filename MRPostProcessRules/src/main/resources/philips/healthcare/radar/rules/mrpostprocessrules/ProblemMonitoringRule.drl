@@ -1,32 +1,31 @@
 package philips.healthcare.radar.rules.mrpostprocessrules;
 
-import philips.healthcare.radar.rules.mrpostprocessrules.ConnectivityDataModel;
+import philips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel;
 
 rule "Connectivity Rule Severity High"
 no-loop true
 	when 
-		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection >10)
+		$MRMeasurementDataModel: MRMeasurementDataModel(numberDaysWithoutConnection >10)
 	then
-		$connectivityModel.setSeverity("High");
-		update($connectivityModel)
+		$MRMeasurementDataModel.setConnectivitySeverity("High");
+		update($MRMeasurementDataModel)
 end
 
 rule "Connectivity Rule Severity Medium"
 no-loop true
 	when
-		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection >= 4 &&
-							numberDaysWithoutConnection <= 10 )
+		$MRMeasurementDataModel: MRMeasurementDataModel(numberDaysWithoutConnection >= 4 && numberDaysWithoutConnection <= 10 )
 	then
-		$connectivityModel.setSeverity("Medium");
-		update($connectivityModel)
+		$MRMeasurementDataModel.setConnectivitySeverity("Medium");
+		update($MRMeasurementDataModel)
 end
 
 rule "Connectivity Rule Severity None"
 no-loop true
 	when
-		$connectivityModel : ConnectivityDataModel(numberDaysWithoutConnection < 3)
-	then
-		$connectivityModel.setSeverity("Nonephilips.healthcare.radar.rules.mrpostprocessrules.MRMeasurementDataModel( )");
-		update($connectivityModel)
+		$MRMeasurementDataModel: MRMeasurementDataModel(numberDaysWithoutConnection < 3)
+	then		
+		$MRMeasurementDataModel.setConnectivitySeverity("None");
+		update($MRMeasurementDataModel)
 end
 
