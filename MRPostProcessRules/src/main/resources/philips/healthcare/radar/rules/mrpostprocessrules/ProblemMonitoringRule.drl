@@ -237,17 +237,19 @@ end
 rule "HW/SW Errors Rule Severity High"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel()
+	$MRMeasurementDataModel: MRMeasurementDataModel(MTBC > 15 && MTBC < 40)
 	then
 	System.out.println("HW/SW Errors Rule Severity High");
+	$MRMeasurementDataModel.setHardwareSoftwareDataSeverity(true);
 end
 
 rule "HW/SW Errors Rule Severity None"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel()
+	$MRMeasurementDataModel: MRMeasurementDataModel(MTBC <= 15 && MTBC >= 40)
 	then
 	System.out.println("HW/SW Errors Rule Severity None");
+	$MRMeasurementDataModel.setHardwareSoftwareDataSeverity(false);
 end
 
 rule "Cooling Rule Severity High"
