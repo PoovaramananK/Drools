@@ -9,7 +9,7 @@ no-loop true
 	then
 		System.out.println("Connectivity Rule Severity High");
 		$MRMeasurementDataModel.setConnectivitySeverity("High");
-		update($MRMeasurementDataModel)
+		//update($MRMeasurementDataModel)
 end
 
 rule "Connectivity Rule Severity Medium"
@@ -19,7 +19,7 @@ no-loop true
 	then
 		System.out.println("Connectivity Rule Severity Medium");
 		$MRMeasurementDataModel.setConnectivitySeverity("Medium");
-		update($MRMeasurementDataModel)
+		//update($MRMeasurementDataModel)
 end
 
 rule "Connectivity Rule Severity None"
@@ -29,7 +29,7 @@ no-loop true
 	then		
 		System.out.println("Connectivity Rule Severity None");
 		$MRMeasurementDataModel.setConnectivitySeverity("None");
-		update($MRMeasurementDataModel);
+		//update($MRMeasurementDataModel);
 end
 
 rule "Helium level rule Severity High"
@@ -39,7 +39,7 @@ no-loop true
 	then
 	System.out.println("Helium level rule Severity High");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Helium level rule Severity Medium"
@@ -49,7 +49,7 @@ no-loop true
 	then
 	System.out.println("Helium level rule Severity Medium");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity High for Titan magnet type"
@@ -59,7 +59,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity High for Titan magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity Medium for Titan magnet type"
@@ -69,7 +69,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity Medium for Titan magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity High for F2000 magnet type"
@@ -79,7 +79,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity High for F2000 magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity Medium for F2000 magnet type"
@@ -89,7 +89,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity Medium for F2000 magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity High for REX magnet type"
@@ -99,7 +99,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity High for REX magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity Medium for REX magnet type"
@@ -109,7 +109,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity Medium for REX magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity High for HFO magnet type"
@@ -119,7 +119,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity High for HFO magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity Medium for HFO magnet type"
@@ -129,7 +129,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity Medium for HFO magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity High for WA30T magnet type"
@@ -139,7 +139,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity High for WA30T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity Medium for WA30T magnet type"
@@ -149,7 +149,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity Medium for WA30T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity High for WA15T magnet type"
@@ -159,7 +159,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity High for WA15T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Boil-off Rule Severity Medium for WA15T magnet type"
@@ -169,7 +169,7 @@ no-loop true
 	then
 	System.out.println("Boil-off Rule Severity Medium for WA15T magnet type");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Helium 4k magnet pressure rule severity high"
@@ -180,7 +180,7 @@ no-loop true
 	System.out.println("Helium 4k magnet pressure rule severity high");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
 	$MRMeasurementDataModel.setHeliumPressureSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Helium 10k magnet pressure rule severity high"
@@ -191,7 +191,7 @@ no-loop true
 	System.out.println("Helium 10k magnet pressure rule severity high");
 	$MRMeasurementDataModel.setHeliumSeverity("High");
 	$MRMeasurementDataModel.setHeliumPressureSeverity("High");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Helium 4k magnet pressure rule severity medium"
@@ -202,7 +202,7 @@ no-loop true
 	System.out.println("Helium 4k magnet pressure rule severity medium");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
 	$MRMeasurementDataModel.setHeliumPressureSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Helium 10k magnet pressure rule severity medium"
@@ -213,7 +213,7 @@ no-loop true
 	System.out.println("Helium 10k magnet pressure rule severity medium");
 	$MRMeasurementDataModel.setHeliumSeverity("Medium");
 	$MRMeasurementDataModel.setHeliumPressureSeverity("Medium");
-	update($MRMeasurementDataModel);
+	//update($MRMeasurementDataModel);
 end
 
 rule "Performance Rule Severity High"
