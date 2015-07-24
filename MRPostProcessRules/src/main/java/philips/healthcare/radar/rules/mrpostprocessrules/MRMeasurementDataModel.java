@@ -31,7 +31,7 @@ public class MRMeasurementDataModel implements java.io.Serializable
    private java.lang.Integer heliumLevel;
 
    @org.kie.api.definition.type.Label("HeliumBoilOff")
-   private java.lang.Float heliumBoilOff;
+   private Double heliumBoilOff;
 
    @org.kie.api.definition.type.Label("MagnetType")
    private java.lang.String magnetType;
@@ -138,16 +138,6 @@ public class MRMeasurementDataModel implements java.io.Serializable
    public void setHeliumLevel(java.lang.Integer heliumLevel)
    {
       this.heliumLevel = heliumLevel;
-   }
-
-   public java.lang.Float getHeliumBoilOff()
-   {
-      return this.heliumBoilOff;
-   }
-
-   public void setHeliumBoilOff(java.lang.Float heliumBoilOff)
-   {
-      this.heliumBoilOff = heliumBoilOff;
    }
 
    public java.lang.String getMagnetType()
@@ -263,10 +253,20 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.IQTQualityAssuranceSeverity = IQTQualityAssuranceSeverity;
    }
 
+   public java.lang.Double getHeliumBoilOff()
+   {
+      return this.heliumBoilOff;
+   }
+
+   public void setHeliumBoilOff(java.lang.Double heliumBoilOff)
+   {
+      this.heliumBoilOff = heliumBoilOff;
+   }
+
    public MRMeasurementDataModel(int mHeliumValue, int mRoomTemperatureValue,
          java.lang.Boolean mIsHeliumOOS, int HELIUMOOSLIMIT,
          int numberDaysWithoutConnection, java.lang.String connectivitySeverity,
-         java.lang.Integer heliumLevel, java.lang.Float heliumBoilOff,
+         java.lang.Integer heliumLevel, java.lang.Double heliumBoilOff,
          java.lang.String magnetType, java.lang.Integer heliumPressure,
          java.lang.Boolean specificationIndexIsOutOfSpec,
          java.lang.Integer MTBC, java.lang.Integer hwErrorsLastWeek,
