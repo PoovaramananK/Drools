@@ -81,6 +81,9 @@ public class MRMeasurementDataModel implements java.io.Serializable
    @org.kie.api.definition.type.Label(value = "HeliumSeverity")
    private java.lang.String heliumSeverity;
 
+   @org.kie.api.definition.type.Label(value = "PerformanceDataSeverity")
+   private java.lang.Boolean performanceDataSeverity;
+
    public MRMeasurementDataModel()
    {
    }
@@ -330,6 +333,16 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.heliumSeverity = heliumSeverity;
    }
 
+   public java.lang.Boolean getPerformanceDataSeverity()
+   {
+      return this.performanceDataSeverity;
+   }
+
+   public void setPerformanceDataSeverity(java.lang.Boolean performanceDataSeverity)
+   {
+      this.performanceDataSeverity = performanceDataSeverity;
+   }
+
    public MRMeasurementDataModel(
          int mHeliumValue,
          int mRoomTemperatureValue,
@@ -354,7 +367,8 @@ public class MRMeasurementDataModel implements java.io.Serializable
          java.lang.Integer longTermBoilOffMlPerHr,
          java.lang.String heliumPressureSeverity,
          java.lang.Boolean hardwareSoftwareDataSeverity,
-         java.lang.String heliumSeverity)
+         java.lang.String heliumSeverity,
+         java.lang.Boolean performanceDataSeverity)
    {
       this.mHeliumValue = mHeliumValue;
       this.mRoomTemperatureValue = mRoomTemperatureValue;
@@ -380,6 +394,7 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.heliumPressureSeverity = heliumPressureSeverity;
       this.hardwareSoftwareDataSeverity = hardwareSoftwareDataSeverity;
       this.heliumSeverity = heliumSeverity;
+      this.performanceDataSeverity = performanceDataSeverity;
    }
 
 }
