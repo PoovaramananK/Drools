@@ -219,20 +219,25 @@ end
 rule "Performance Rule Severity High"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec = true)
 	then
 	System.out.println("Performance Rule Severity High");
+	$MRMeasurementDataModel.setPerformanceDataSeverity(true);
 end
 
 rule "Performance Rule Severity None"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec = false)
 	then
 	System.out.println("Performance Rule Severity None");
+	$MRMeasurementDataModel.setPerformanceDataSeverity(false);
 end
 
 rule "HW/SW Errors Rule Severity High"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel()
 	then
 	System.out.println("HW/SW Errors Rule Severity High");
 end
@@ -240,6 +245,7 @@ end
 rule "HW/SW Errors Rule Severity None"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel()
 	then
 	System.out.println("HW/SW Errors Rule Severity None");
 end
@@ -254,6 +260,7 @@ end
 rule "Cooling Rule Severity None"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel()
 	then
 	System.out.println("Cooling Rule Severity None");
 end
@@ -261,6 +268,7 @@ end
 rule "IQT Quality Assurance High"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel()
 	then
 	System.out.println("IQT Quality Assurance High");
 end
@@ -268,6 +276,7 @@ end
 rule "IQT Quality Assurance None"
 no-loop true
 	when
+	$MRMeasurementDataModel: MRMeasurementDataModel()
 	then
 	System.out.println("IQT Quality Assurance None");
 end
