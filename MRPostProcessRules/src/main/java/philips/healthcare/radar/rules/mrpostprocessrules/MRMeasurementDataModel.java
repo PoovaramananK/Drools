@@ -22,44 +22,45 @@ public class MRMeasurementDataModel implements java.io.Serializable
 
    private int numberDaysWithoutConnection;
 
+   @org.kie.api.definition.type.Label("ConnectivitySeverity")
    private java.lang.String connectivitySeverity;
 
    private java.lang.Integer heliumLevel;
 
-   @org.kie.api.definition.type.Label(value = "HeliumBoilOff")
+   @org.kie.api.definition.type.Label("HeliumBoilOff")
    private java.lang.Float heliumBoilOff;
 
-   @org.kie.api.definition.type.Label(value = "MagnetType")
+   @org.kie.api.definition.type.Label("MagnetType")
    private java.lang.String magnetType;
 
-   @org.kie.api.definition.type.Label(value = "HeliumPressure")
+   @org.kie.api.definition.type.Label("HeliumPressure")
    private java.lang.Integer heliumPressure;
 
-   @org.kie.api.definition.type.Label(value = "SpecificationIndexIsOutOfSpec")
+   @org.kie.api.definition.type.Label("SpecificationIndexIsOutOfSpec")
    private java.lang.Boolean specificationIndexIsOutOfSpec;
 
-   @org.kie.api.definition.type.Label(value = "MTBC")
+   @org.kie.api.definition.type.Label("MTBC")
    private java.lang.Integer MTBC;
 
-   @org.kie.api.definition.type.Label(value = "HwErrorsLastWeek")
+   @org.kie.api.definition.type.Label("HwErrorsLastWeek")
    private java.lang.Integer hwErrorsLastWeek;
 
-   @org.kie.api.definition.type.Label(value = "CoolingHoursOutOfSpec")
+   @org.kie.api.definition.type.Label("CoolingHoursOutOfSpec")
    private java.lang.Integer coolingHoursOutOfSpec;
 
-   @org.kie.api.definition.type.Label(value = "CoolingSeverity")
+   @org.kie.api.definition.type.Label("CoolingSeverity")
    private java.lang.String coolingSeverity;
 
-   @org.kie.api.definition.type.Label(value = "ClimateHoursOutOfSpec")
+   @org.kie.api.definition.type.Label("ClimateHoursOutOfSpec")
    private java.lang.Integer climateHoursOutOfSpec;
 
-   @org.kie.api.definition.type.Label(value = "ClimateSeverity")
+   @org.kie.api.definition.type.Label("ClimateSeverity")
    private java.lang.String climateSeverity;
 
-   @org.kie.api.definition.type.Label(value = "IQTQualityAssuranceOutOfSpec")
+   @org.kie.api.definition.type.Label("IQTQualityAssuranceOutOfSpec")
    private java.lang.Integer IQTQualityAssuranceOutOfSpec;
 
-   @org.kie.api.definition.type.Label(value = "IQTQualityAssuranceSeverity")
+   @org.kie.api.definition.type.Label("IQTQualityAssuranceSeverity")
    private java.lang.String IQTQualityAssuranceSeverity;
 
    public MRMeasurementDataModel()
