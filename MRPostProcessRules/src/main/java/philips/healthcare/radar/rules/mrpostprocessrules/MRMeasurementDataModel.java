@@ -66,6 +66,9 @@ public class MRMeasurementDataModel implements java.io.Serializable
    @org.kie.api.definition.type.Label("IQTQualityAssuranceSeverity")
    private java.lang.String IQTQualityAssuranceSeverity;
 
+   @org.kie.api.definition.type.Label(value = "DeviceConfig")
+   private philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig;
+
    public MRMeasurementDataModel()
    {
    }
@@ -263,19 +266,38 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.heliumBoilOff = heliumBoilOff;
    }
 
-   public MRMeasurementDataModel(int mHeliumValue, int mRoomTemperatureValue,
-         java.lang.Boolean mIsHeliumOOS, int HELIUMOOSLIMIT,
-         int numberDaysWithoutConnection, java.lang.String connectivitySeverity,
-         java.lang.Integer heliumLevel, java.lang.Double heliumBoilOff,
-         java.lang.String magnetType, java.lang.Integer heliumPressure,
+   public philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig getDeviceConfig()
+   {
+      return this.deviceConfig;
+   }
+
+   public void setDeviceConfig(
+         philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig)
+   {
+      this.deviceConfig = deviceConfig;
+   }
+
+   public MRMeasurementDataModel(
+         int mHeliumValue,
+         int mRoomTemperatureValue,
+         java.lang.Boolean mIsHeliumOOS,
+         int HELIUMOOSLIMIT,
+         int numberDaysWithoutConnection,
+         java.lang.String connectivitySeverity,
+         java.lang.Integer heliumLevel,
+         java.lang.Double heliumBoilOff,
+         java.lang.String magnetType,
+         java.lang.Integer heliumPressure,
          java.lang.Boolean specificationIndexIsOutOfSpec,
-         java.lang.Integer MTBC, java.lang.Integer hwErrorsLastWeek,
+         java.lang.Integer MTBC,
+         java.lang.Integer hwErrorsLastWeek,
          java.lang.Integer coolingHoursOutOfSpec,
          java.lang.String coolingSeverity,
          java.lang.Integer climateHoursOutOfSpec,
          java.lang.String climateSeverity,
          java.lang.Integer IQTQualityAssuranceOutOfSpec,
-         java.lang.String IQTQualityAssuranceSeverity)
+         java.lang.String IQTQualityAssuranceSeverity,
+         philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig)
    {
       this.mHeliumValue = mHeliumValue;
       this.mRoomTemperatureValue = mRoomTemperatureValue;
@@ -296,6 +318,7 @@ public class MRMeasurementDataModel implements java.io.Serializable
       this.climateSeverity = climateSeverity;
       this.IQTQualityAssuranceOutOfSpec = IQTQualityAssuranceOutOfSpec;
       this.IQTQualityAssuranceSeverity = IQTQualityAssuranceSeverity;
+      this.deviceConfig = deviceConfig;
    }
 
 }
