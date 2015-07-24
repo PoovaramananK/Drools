@@ -219,7 +219,7 @@ end
 rule "Performance Rule Severity High"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec = true)
+	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec == true)
 	then
 	System.out.println("Performance Rule Severity High");
 	$MRMeasurementDataModel.setPerformanceDataSeverity(true);
@@ -228,7 +228,7 @@ end
 rule "Performance Rule Severity None"
 no-loop true
 	when
-	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec = false)
+	$MRMeasurementDataModel: MRMeasurementDataModel(SpecificationIndexIsOutOfSpec == false)
 	then
 	System.out.println("Performance Rule Severity None");
 	$MRMeasurementDataModel.setPerformanceDataSeverity(false);
@@ -258,7 +258,7 @@ no-loop true
 	$MRMeasurementDataModel: MRMeasurementDataModel(coolingHoursOutOfSpec > 10)
 	then
 	System.out.println("Cooling Rule Severity High");
-	$MRMeasurementDataModel.setCoolingSeverity(true);
+	$MRMeasurementDataModel.setCoolingSeverity("High");
 end
 
 rule "Cooling Rule Severity None"
@@ -267,7 +267,7 @@ no-loop true
 	$MRMeasurementDataModel: MRMeasurementDataModel(coolingHoursOutOfSpec <= 10)
 	then
 	System.out.println("Cooling Rule Severity None");
-	$MRMeasurementDataModel.setCoolingSeverity(false);
+	$MRMeasurementDataModel.setCoolingSeverity("None");
 end
 
 rule "Climate Rule Severity High"
@@ -276,7 +276,7 @@ no-loop true
 	$MRMeasurementDataModel: MRMeasurementDataModel(climateHoursOutOfSpec > 1)
 	then
 	System.out.println("Cooling Rule Severity High");
-	$MRMeasurementDataModel.setClimateSeverity(true);
+	$MRMeasurementDataModel.setClimateSeverity("high");
 end
 
 rule "Climate Rule Severity None"
@@ -285,7 +285,7 @@ no-loop true
 	$MRMeasurementDataModel: MRMeasurementDataModel(climateHoursOutOfSpec <= 1)
 	then
 	System.out.println("Cooling Rule Severity None");
-	$MRMeasurementDataModel.setClimateSeverity(false);
+	$MRMeasurementDataModel.setClimateSeverity("None");
 end
 
 rule "IQT Quality Assurance High"
@@ -294,14 +294,14 @@ no-loop true
 	$MRMeasurementDataModel: MRMeasurementDataModel(IQTQualityAssuranceOutOfSpec > 0)
 	then
 	System.out.println("IQT Quality Assurance High");
-	$MRMeasurementDataModel.setIQTQualityAssuranceSeveritySeverity(true);
+	$MRMeasurementDataModel.setIQTQualityAssuranceSeverity("High");
 end
 
 rule "IQT Quality Assurance None"
 no-loop true
 	when
-$MRMeasurementDataModel: MRMeasurementDataModel(IQTQualityAssuranceOutOfSpec = 0)
+$MRMeasurementDataModel: MRMeasurementDataModel(IQTQualityAssuranceOutOfSpec == 0)
 	then
 	System.out.println("IQT Quality Assurance None");
-	$MRMeasurementDataModel.setIQTQualityAssuranceSeveritySeverity(false);
+	$MRMeasurementDataModel.setIQTQualityAssuranceSeverity("None");
 end
