@@ -10,17 +10,6 @@ public class MRMeasurementDataModel implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("HeliumValue")
-   private int mHeliumValue;
-
-   @org.kie.api.definition.type.Label("RoomTemperatureValue")
-   private int mRoomTemperatureValue;
-
-   @org.kie.api.definition.type.Label("HeliumOOS")
-   private java.lang.Boolean mIsHeliumOOS;
-
-   private int HELIUMOOSLIMIT;
-
    @org.kie.api.definition.type.Label("NumberDaysWithoutConnection")
    private int numberDaysWithoutConnection;
 
@@ -69,63 +58,23 @@ public class MRMeasurementDataModel implements java.io.Serializable
    @org.kie.api.definition.type.Label("DeviceConfig")
    private philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig deviceConfig;
 
-   @org.kie.api.definition.type.Label(value = "LongTermBoilOffMlPerHr")
+   @org.kie.api.definition.type.Label("LongTermBoilOffMlPerHr")
    private java.lang.Integer longTermBoilOffMlPerHr;
 
-   @org.kie.api.definition.type.Label(value = "HeliumPressure.Severity")
+   @org.kie.api.definition.type.Label("HeliumPressure.Severity")
    private java.lang.String heliumPressureSeverity;
 
-   @org.kie.api.definition.type.Label(value = "HardwareSoftwareDataSeverity")
+   @org.kie.api.definition.type.Label("HardwareSoftwareDataSeverity")
    private java.lang.Boolean hardwareSoftwareDataSeverity;
 
-   @org.kie.api.definition.type.Label(value = "HeliumSeverity")
+   @org.kie.api.definition.type.Label("HeliumSeverity")
    private java.lang.String heliumSeverity;
 
-   @org.kie.api.definition.type.Label(value = "PerformanceDataSeverity")
+   @org.kie.api.definition.type.Label("PerformanceDataSeverity")
    private java.lang.Boolean performanceDataSeverity;
 
    public MRMeasurementDataModel()
    {
-   }
-
-   public int getmHeliumValue()
-   {
-      return this.mHeliumValue;
-   }
-
-   public void setmHeliumValue(int mHeliumValue)
-   {
-      this.mHeliumValue = mHeliumValue;
-   }
-
-   public int getmRoomTemperatureValue()
-   {
-      return this.mRoomTemperatureValue;
-   }
-
-   public void setmRoomTemperatureValue(int mRoomTemperatureValue)
-   {
-      this.mRoomTemperatureValue = mRoomTemperatureValue;
-   }
-
-   public java.lang.Boolean getmIsHeliumOOS()
-   {
-      return this.mIsHeliumOOS;
-   }
-
-   public void setmIsHeliumOOS(java.lang.Boolean mIsHeliumOOS)
-   {
-      this.mIsHeliumOOS = mIsHeliumOOS;
-   }
-
-   public int getHELIUMOOSLIMIT()
-   {
-      return this.HELIUMOOSLIMIT;
-   }
-
-   public void setHELIUMOOSLIMIT(int HELIUMOOSLIMIT)
-   {
-      this.HELIUMOOSLIMIT = HELIUMOOSLIMIT;
    }
 
    public int getNumberDaysWithoutConnection()
@@ -344,10 +293,6 @@ public class MRMeasurementDataModel implements java.io.Serializable
    }
 
    public MRMeasurementDataModel(
-         int mHeliumValue,
-         int mRoomTemperatureValue,
-         java.lang.Boolean mIsHeliumOOS,
-         int HELIUMOOSLIMIT,
          int numberDaysWithoutConnection,
          java.lang.String connectivitySeverity,
          java.lang.Integer heliumLevel,
@@ -370,10 +315,6 @@ public class MRMeasurementDataModel implements java.io.Serializable
          java.lang.String heliumSeverity,
          java.lang.Boolean performanceDataSeverity)
    {
-      this.mHeliumValue = mHeliumValue;
-      this.mRoomTemperatureValue = mRoomTemperatureValue;
-      this.mIsHeliumOOS = mIsHeliumOOS;
-      this.HELIUMOOSLIMIT = HELIUMOOSLIMIT;
       this.numberDaysWithoutConnection = numberDaysWithoutConnection;
       this.connectivitySeverity = connectivitySeverity;
       this.heliumLevel = heliumLevel;
