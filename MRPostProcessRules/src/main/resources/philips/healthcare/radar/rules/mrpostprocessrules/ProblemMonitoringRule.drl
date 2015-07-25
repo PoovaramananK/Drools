@@ -275,7 +275,7 @@ no-loop true
 	when
 	$MRMeasurementDataModel: MRMeasurementDataModel(climateHoursOutOfSpec > 1)
 	then
-	System.out.println("Cooling Rule Severity High");
+	System.out.println("Climate Rule Severity High");
 	$MRMeasurementDataModel.setClimateSeverity("high");
 end
 
@@ -284,7 +284,7 @@ no-loop true
 	when
 	$MRMeasurementDataModel: MRMeasurementDataModel(climateHoursOutOfSpec <= 1)
 	then
-	System.out.println("Cooling Rule Severity None");
+	System.out.println("Climate Rule Severity None");
 	$MRMeasurementDataModel.setClimateSeverity("None");
 end
 
