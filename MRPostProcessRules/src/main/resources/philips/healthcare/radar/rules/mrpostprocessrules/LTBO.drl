@@ -4,6 +4,12 @@ import philips.healthcare.radar.rules.mrpostprocessrules.CalculateLTBORequest;
 
 rule "SimpleLoopConcept"
 	when
+		eval(true)
 	then
+		hello("Ramanan is calling");
 end
+
+function String hello(String name) { return "Hello "+name+"!";}
+{ return "Hello "+name
++"!";
 
