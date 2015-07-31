@@ -11,8 +11,9 @@ public class CalculateLTBORequest implements java.io.Serializable
 
    @org.kie.api.definition.type.Label(value = "Config")
    private philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig config;
+
    @org.kie.api.definition.type.Label(value = "HeliumLevelList")
-   private philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement heliumLevelList;
+   private java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> heliumLevelList;
 
    public CalculateLTBORequest()
    {
@@ -29,20 +30,20 @@ public class CalculateLTBORequest implements java.io.Serializable
       this.config = config;
    }
 
-   public philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement getHeliumLevelList()
+   public java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> getHeliumLevelList()
    {
       return this.heliumLevelList;
    }
 
    public void setHeliumLevelList(
-         philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement heliumLevelList)
+         java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> heliumLevelList)
    {
       this.heliumLevelList = heliumLevelList;
    }
 
    public CalculateLTBORequest(
          philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig config,
-         philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement heliumLevelList)
+         java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> heliumLevelList)
    {
       this.config = config;
       this.heliumLevelList = heliumLevelList;
