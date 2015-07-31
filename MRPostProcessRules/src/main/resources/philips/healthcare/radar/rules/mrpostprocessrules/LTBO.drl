@@ -9,7 +9,7 @@ no-loop true
 	when
 		$ltboRequest : CalculateLTBORequest()
 	then
-		hello("Ramanan is calling");
+		System.out.println(hello("Ramanan is calling"));
 end
 
 function String hello(String name) 
