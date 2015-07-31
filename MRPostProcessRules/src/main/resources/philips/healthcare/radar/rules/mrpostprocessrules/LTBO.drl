@@ -1,2 +1,9 @@
 package philips.healthcare.radar.rules.mrpostprocessrules;
 
+import philips.healthcare.radar.rules.mrpostprocessrules.CalculateLTBORequest;
+
+rule "SimpleLoopConcept"
+	when
+	then
+end
+
