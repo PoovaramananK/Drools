@@ -15,6 +15,9 @@ public class CalculateLTBORequest implements java.io.Serializable
    @org.kie.api.definition.type.Label(value = "HeliumLevelList")
    private java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> heliumLevelList;
 
+   @org.kie.api.definition.type.Label(value = "BoiloffList")
+   private java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumBoiloff> boiloffList;
+
    public CalculateLTBORequest()
    {
    }
@@ -41,12 +44,25 @@ public class CalculateLTBORequest implements java.io.Serializable
       this.heliumLevelList = heliumLevelList;
    }
 
+   public java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumBoiloff> getBoiloffList()
+   {
+      return this.boiloffList;
+   }
+
+   public void setBoiloffList(
+         java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumBoiloff> boiloffList)
+   {
+      this.boiloffList = boiloffList;
+   }
+
    public CalculateLTBORequest(
          philips.healthcare.radar.rules.mrpostprocessrules.MRDeviceConfig config,
-         java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> heliumLevelList)
+         java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumMeasurement> heliumLevelList,
+         java.util.List<philips.healthcare.radar.rules.mrpostprocessrules.HeliumBoiloff> boiloffList)
    {
       this.config = config;
       this.heliumLevelList = heliumLevelList;
+      this.boiloffList = boiloffList;
    }
 
 }
