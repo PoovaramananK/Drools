@@ -2,10 +2,12 @@ package philips.healthcare.radar.rules.mrpostprocessrules;
 
 import philips.healthcare.radar.rules.mrpostprocessrules.CalculateLTBORequest;
 
+
+
 rule "SimpleLoopConcept"
 no-loop true
 	when
-		eval(true)
+		$ltboRequest : CalculateLTBORequest()
 	then
 		hello("Ramanan is calling");
 end
