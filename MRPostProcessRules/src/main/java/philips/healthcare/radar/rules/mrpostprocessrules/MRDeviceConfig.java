@@ -13,8 +13,17 @@ public class MRDeviceConfig implements java.io.Serializable
    private java.lang.String coolingCabinet;
    private java.lang.String magnetType;
 
-   @org.kie.api.definition.type.Label(value = "MagnetTypeCategory")
+   @org.kie.api.definition.type.Label("MagnetTypeCategory")
    private java.lang.String magnetTypeCategory;
+
+   @org.kie.api.definition.type.Label(value = "MainSystemType")
+   private java.lang.String mainSystemType;
+
+   @org.kie.api.definition.type.Label(value = "HelUpperLim")
+   private int helUpperLim;
+
+   @org.kie.api.definition.type.Label(value = "HelVesselCapacity")
+   private int helVesselCapacity;
 
    public MRDeviceConfig()
    {
@@ -50,12 +59,46 @@ public class MRDeviceConfig implements java.io.Serializable
       this.magnetTypeCategory = magnetTypeCategory;
    }
 
+   public java.lang.String getMainSystemType()
+   {
+      return this.mainSystemType;
+   }
+
+   public void setMainSystemType(java.lang.String mainSystemType)
+   {
+      this.mainSystemType = mainSystemType;
+   }
+
+   public int getHelUpperLim()
+   {
+      return this.helUpperLim;
+   }
+
+   public void setHelUpperLim(int helUpperLim)
+   {
+      this.helUpperLim = helUpperLim;
+   }
+
+   public int getHelVesselCapacity()
+   {
+      return this.helVesselCapacity;
+   }
+
+   public void setHelVesselCapacity(int helVesselCapacity)
+   {
+      this.helVesselCapacity = helVesselCapacity;
+   }
+
    public MRDeviceConfig(java.lang.String coolingCabinet,
-         java.lang.String magnetType, java.lang.String magnetTypeCategory)
+         java.lang.String magnetType, java.lang.String magnetTypeCategory,
+         java.lang.String mainSystemType, int helUpperLim, int helVesselCapacity)
    {
       this.coolingCabinet = coolingCabinet;
       this.magnetType = magnetType;
       this.magnetTypeCategory = magnetTypeCategory;
+      this.mainSystemType = mainSystemType;
+      this.helUpperLim = helUpperLim;
+      this.helVesselCapacity = helVesselCapacity;
    }
 
 }
