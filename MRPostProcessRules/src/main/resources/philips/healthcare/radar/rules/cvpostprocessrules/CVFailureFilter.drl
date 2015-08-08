@@ -1,10 +1,13 @@
 package philips.healthcare.radar.rules.cvpostprocessrules;
 
-import philips.healthcare.radar.rules.cvpostprocessrules.CDF( )
+import philips.healthcare.radar.rules.cvpostprocessrules.CDF;
+import philips.healthcare.radar.rules.cvpostprocessrules.Event;
 
 rule "LicenseError"
 	when
-		$events : events
+		CDF ($events : events)
+		Event(eventID == "00001" && category == "Error") from $events
 	then
+		System.out.println("LicenseError...");
 end
 
