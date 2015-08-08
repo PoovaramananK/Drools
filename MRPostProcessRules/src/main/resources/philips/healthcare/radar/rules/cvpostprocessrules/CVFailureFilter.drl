@@ -1,2 +1,10 @@
 package philips.healthcare.radar.rules.cvpostprocessrules;
 
+import philips.healthcare.radar.rules.cvpostprocessrules.CDF( )
+
+rule "LicenseError"
+	when
+		$events : events
+	then
+end
+
