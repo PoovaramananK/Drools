@@ -21,7 +21,8 @@ end
 
 rule "Abnormal"
 	when
-		$e1 : Event(eventID == "00005" && category == "Information")
+		$e1 : Event(eventID == "00005" && category == "information")
+		$e2: Event( this after $e1, (eventID == "00004" && category == "information"))
 	then
 		System.out.println("Abnormal found...");
 end
