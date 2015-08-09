@@ -5,8 +5,6 @@ package philips.healthcare.radar.rules.cvpostprocessrules;
  */
 
 @org.kie.api.remote.Remotable
-@org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
-@org.kie.api.definition.type.Timestamp("timestamp")
 public class Event implements java.io.Serializable
 {
 
@@ -20,9 +18,6 @@ public class Event implements java.io.Serializable
    private java.lang.String additionalInfo;
    @org.kie.api.definition.type.Label("Category")
    private java.lang.String category;
-
-   @org.kie.api.definition.type.Label(value = "Timestamp")
-   private java.util.Date timestamp;
 
    public Event()
    {
@@ -68,25 +63,13 @@ public class Event implements java.io.Serializable
       this.category = category;
    }
 
-   public java.util.Date getTimestamp()
-   {
-      return this.timestamp;
-   }
-
-   public void setTimestamp(java.util.Date timestamp)
-   {
-      this.timestamp = timestamp;
-   }
-
    public Event(java.lang.String eventID, java.lang.String description,
-         java.lang.String additionalInfo, java.lang.String category,
-         java.util.Date timestamp)
+         java.lang.String additionalInfo, java.lang.String category)
    {
       this.eventID = eventID;
       this.description = description;
       this.additionalInfo = additionalInfo;
       this.category = category;
-      this.timestamp = timestamp;
    }
 
 }
