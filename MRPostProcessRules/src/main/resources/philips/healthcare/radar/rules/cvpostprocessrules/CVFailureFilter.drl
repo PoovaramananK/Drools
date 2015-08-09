@@ -19,4 +19,11 @@ rule "StartUpError"
 		System.out.println("StartUpError found...");
 end
 
+rule "LicenseErrorOnlyevent"
+	when
+		Event(eventID == "00001" && category == "Error")
+	then
+		System.out.println("License error found...");
+end
+
 
