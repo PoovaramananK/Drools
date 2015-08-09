@@ -7,6 +7,8 @@ import java.util.Date;
  */
 
 @org.kie.api.remote.Remotable
+@org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
+@org.kie.api.definition.type.Timestamp("dateStamp")
 public class Event implements java.io.Serializable
 {
 
