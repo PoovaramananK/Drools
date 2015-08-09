@@ -8,6 +8,15 @@ rule "LicenseError"
 		CDF ($events : events)
 		Event(eventID == "00001" && category == "Error") from $events
 	then
-		System.out.println("LicenseError...");
+		System.out.println("License error found...");
 end
+
+rule "StartUpError"
+	when
+		CDF ($events : events)
+		Event(eventID == "00002" && category == "Error") from $events
+	then
+		System.out.println("StartUpError found...");
+end
+
 
