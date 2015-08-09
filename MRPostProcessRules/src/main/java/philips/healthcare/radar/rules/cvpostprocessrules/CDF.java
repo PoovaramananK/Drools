@@ -11,25 +11,25 @@ public class CDF implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label(value = "Events")
-   private java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.CDF> events;
+   private java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.Event> events;
 
    public CDF()
    {
    }
 
-   public java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.CDF> getEvents()
+   public java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.Event> getEvents()
    {
       return this.events;
    }
 
    public void setEvents(
-         java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.CDF> events)
+         java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.Event> events)
    {
       this.events = events;
    }
 
    public CDF(
-         java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.CDF> events)
+         java.util.List<philips.healthcare.radar.rules.cvpostprocessrules.Event> events)
    {
       this.events = events;
    }
