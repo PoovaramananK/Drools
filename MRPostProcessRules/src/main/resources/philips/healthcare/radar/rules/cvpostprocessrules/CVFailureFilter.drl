@@ -19,11 +19,12 @@ rule "StartUpError"
 		System.out.println("StartUpError found...");
 end
 
-rule "LicenseErrorOnlyevent"
+rule "Abnormal"
 	when
-		Event(eventID == "00001" && category == "Error")
+		$e1 : Event(eventID == "00004" && category == "information")
+		$e2: Event( this after $e1, eventID == "00004" && category == "information")
 	then
-		System.out.println("License error found...");
+		System.out.println("Abnormal found...");
 end
 
 
