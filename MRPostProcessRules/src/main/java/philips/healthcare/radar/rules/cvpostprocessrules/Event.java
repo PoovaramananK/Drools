@@ -19,6 +19,9 @@ public class Event implements java.io.Serializable
    @org.kie.api.definition.type.Label("Category")
    private java.lang.String category;
 
+   @org.kie.api.definition.type.Label(value = "TimeStamp")
+   private java.util.Date timeStamp;
+
    public Event()
    {
    }
@@ -63,13 +66,25 @@ public class Event implements java.io.Serializable
       this.category = category;
    }
 
+   public java.util.Date getTimeStamp()
+   {
+      return this.timeStamp;
+   }
+
+   public void setTimeStamp(java.util.Date timeStamp)
+   {
+      this.timeStamp = timeStamp;
+   }
+
    public Event(java.lang.String eventID, java.lang.String description,
-         java.lang.String additionalInfo, java.lang.String category)
+         java.lang.String additionalInfo, java.lang.String category,
+         java.util.Date timeStamp)
    {
       this.eventID = eventID;
       this.description = description;
       this.additionalInfo = additionalInfo;
       this.category = category;
+      this.timeStamp = timeStamp;
    }
 
 }
