@@ -22,7 +22,7 @@ end
 rule "Abnormal"
 	when
 		CDF ($events : events)
-		$e1 : Event(eventID == "00005" && category == "information") from $events
+		$e1 : Event(eventID == "00006" && category == "information") from $events
 		$e2: Event( this after $e1, (eventID == "00004" && category == "information")) from $events
 	then
 		System.out.println("Abnormal found...");
